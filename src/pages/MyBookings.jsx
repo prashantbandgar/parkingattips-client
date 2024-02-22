@@ -5,21 +5,8 @@ import { apiUrls, baseUrl } from '../lib/constants'
 import {findslot, formatDate} from '../lib/util'
 
 export default function MyBookings() {
-<<<<<<< HEAD
   // const [data, setData] = useState([])
   const handleCancel = (id) => {
-=======
-  const [data, setData] = useState([])
-  // const handleCancel = (id) => {
-  //   axios
-  //     .get(baseUrl+apiUrls.CANCELLED_BOOKING + id)
-  //     .then((resp) => {
-  //       Swal.fire({ title: resp.data })
-  //       loadData()
-  //     })
-  // }
-    const handleCancel = (id) => {
->>>>>>> e997abdb24c664d3447cae445ee7aa23b609d5f0
     axios.delete(baseUrl+apiUrls.BOOKINGS_URL + id).then((resp) => {
       Swal.fire({ title: resp.data })
       loadData()
